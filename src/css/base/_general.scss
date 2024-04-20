@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
+//a,
+//svg,
+//button {
+//    transition: 0.3s all;
+//}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+svg {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
