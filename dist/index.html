@@ -8,11 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <title>Dom Decor</title>
+  <title>Vetgenomics</title>
 <link href="./css/main.css" rel="stylesheet"></head>
 
 <body class="body bg-body">
-<header class="header pe-none pt-4 position-fixed w-100 z-1">
+<header class="header pe-none pt-4 position-fixed w-100 z-3">
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center  pe-auto">
       <div class="col-2">
@@ -43,9 +43,9 @@
         </div>
       </div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4 d-none d-xl-block">
       <div class="col-2">
-        <nav class="d-flex flex-column align-items-start gap-2 pe-auto">
+        <nav class="d-flex flex-column align-items-start gap-2 pe-auto position-relative z-3">
           <a class="btn border rounded-pill" href="#">Генетические тесты</a>
           <a class="btn border rounded-pill" href="#">Как сделать анализ</a>
           <a class="btn border rounded-pill" href="#">Заказ и отправка</a>
@@ -65,16 +65,16 @@
 <main class="main pt-5">
   <div class="container">
     <div class="row pt-5">
-      <div class="col-2"></div>
-      <div class="col-9 pt-5">
+      <div class="col-2 d-none d-xl-block d-xxl-block"></div>
+      <div class="col-xl-9 col-lg-12 pt-5">
         <section class="pt-4">
           <div class="row mb-5 pb-3">
-            <div class="col-9">
+            <div class="col-xl-9 col-lg-12">
               <h1 class="h1">Локус B (черный/коричневый/красный)</h1>
             </div>
           </div>
           <div class="row gy-3">
-            <div class="col-8">
+            <div class="col-lg-8 col-md-7 col-sm-12 order-sm-1">
               <div class="card border-0 p-3 bg-light">
                 <p>
                   Локус В участвует в формировании черного пигмента. Аллель В (дикого типа) – доминантный, у носителей
@@ -93,7 +93,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-5 col-sm-12 order-sm-0 order-md-1">
               <div class="card gap-3 border-0 p-3 bg-light">
                 <div class="card border-0 p-3 bg-info">
                   <small>Срок выполнения:</small>
@@ -106,7 +106,7 @@
                 <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8 col-md-7 col-sm-12 order-sm-2">
               <div class="card border-0 p-3 bg-light">
                 <p>Возможные генотипы собаки:</p>
                 <ul class="list-unstyled d-flex flex-column gap-2">
@@ -131,7 +131,7 @@
           <div class="row mt-5 mb-4">
             <div class="col-12 pt-5">
               <h2 class="h1 mt-2 mb-5 pb-2">С эти тестом заказывают</h2>
-              <div class="d-flex gap-2">
+              <div class="d-flex gap-2 flex-wrap">
                 <a class="btn border p-2 bg-light text-uppercase" href="#">Наборы для анализов</a>
                 <a class="btn border p-2 bg-light text-uppercase" href="#">Локус D</a>
                 <a class="btn border p-2 bg-light text-uppercase" href="#">Локус B</a>
@@ -143,103 +143,338 @@
             </div>
           </div>
           <div class="row mb-4">
-            <div class="col-4">
-              <div class="card gap-3 border-0 p-3 bg-light">
-                <div class="d-flex gap-2 align-items-center">
-                  <div class="btn border p-2 bg-light text-uppercase">Новый</div>
-                  <div class="btn btn-secondary border p-2 text-uppercase">Заболевания</div>
-                  <a class="btn border p-2 ms-auto" href="#">
-                    <svg>
-                      <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card border-0 p-3 bg-info">
-                  <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I (интенсивность
-                    желто-</h3>
-                  <small>Срок выполнения:</small>
-                  <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
-                  <div class="d-flex gap-2 align-items-baseline">
-                    <p class="h4 text-black m-0">2150.00 ₽</p>
-                    <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+            <div class="col-12">
+              <div class="swiper swiper--default" data-slider="default">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="btn border p-2 bg-light text-uppercase">Новый</div>
+                        <div class="btn btn-secondary border p-2 text-uppercase">Заболевания</div>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
+                        <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
+                        <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
+                        <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
+                        <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card gap-3 border-0 p-3 bg-light">
+                      <div class="d-flex gap-2 align-items-center">
+                        <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
+                        <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
+                        <a class="btn border p-2 ms-auto" href="#">
+                          <svg>
+                            <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="card border-0 p-3 bg-info">
+                        <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I
+                          (интенсивность
+                          желто-</h3>
+                        <small>Срок выполнения:</small>
+                        <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
+                        <div class="d-flex gap-2 align-items-baseline">
+                          <p class="h4 text-black m-0">2150.00 ₽</p>
+                          <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                        </div>
+                      </div>
+                      <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
+                    </div>
                   </div>
                 </div>
-                <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card gap-3 border-0 p-3 bg-light">
-                <div class="d-flex gap-2 align-items-center">
-                  <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
-                  <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
-                  <a class="btn border p-2 ms-auto" href="#">
+                <div class="swiper-info">
+                  <a class="btn border d-flex align-items-center p-2 ps-4 pe-4 border-black" href="#">
+                    Все тесты
                     <svg>
-                      <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                      <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
                     </svg>
                   </a>
-                </div>
-                <div class="card border-0 p-3 bg-info">
-                  <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I (интенсивность
-                    желто-</h3>
-                  <small>Срок выполнения:</small>
-                  <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
-                  <div class="d-flex gap-2 align-items-baseline">
-                    <p class="h4 text-black m-0">2150.00 ₽</p>
-                    <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
+                  <div class="swiper-control">
+                    <button class="btn border p-2 rounded-circle border-black slider-btn slider-btn--prev">
+                      <svg>
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
+                      </svg>
+                    </button>
+                    <button class="btn border p-2 rounded-circle border-black slider-btn slider-btn--next">
+                      <svg>
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card gap-3 border-0 p-3 bg-light">
-                <div class="d-flex gap-2 align-items-center">
-                  <a class="btn border p-2 bg-light text-uppercase" href="#">Новый</a>
-                  <a class="btn btn-secondary border p-2 text-uppercase" href="#">Заболевания</a>
-                  <a class="btn border p-2 ms-auto" href="#">
-                    <svg>
-                      <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="card border-0 p-3 bg-info">
-                  <h3 class="fs-5 mb-5">Локус I (интенсивность желто-красного пигмента волоса) Локус I (интенсивность
-                    желто-</h3>
-                  <small>Срок выполнения:</small>
-                  <p class="mb-4"><strong>3-5</strong> рабочих дней</p>
-                  <div class="d-flex gap-2 align-items-baseline">
-                    <p class="h4 text-black m-0">2150.00 ₽</p>
-                    <p class="text-black text-decoration-line-through m-0">2990.00 ₽</p>
-                  </div>
-                </div>
-                <button class="btn border fs-5 fw-medium pt-3 pb-3 lh-1">Оформить заказ</button>
               </div>
             </div>
           </div>
-          <div class="row justify-content-between">
-            <div class="col-3">
-              <div class="d-flex justify-content-start">
-                <a class="btn border d-flex align-items-center p-2 ps-4 pe-4 border-black" href="#">
-                  Все тесты
-                  <svg>
-                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
-                  </svg>
-                </a>
+        </section>
+        <section class="pt-5">
+          <div class="row mt-5 mb-4">
+            <div class="col-lg-8 col-md-12 pt-5">
+              <picture class="d-flex w-100 rounded-4 overflow-hidden">
+                <img class="d-block w-100" src="./assets/images/doc-with-dog.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="pt-5">
+          <div class="row mt-5 mb-4">
+            <div class="col-12 pt-5">
+              <h2 class="h1 mt-2 mb-5 pb-2">Список пород</h2>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="swiper swiper--default" data-slider="default">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="card border-0 d-flex position-relative justify-content-center rounded-4 overflow-hidden">
+                      <a class="position-absolute top-0 end-0 btn border p-2 ms-auto" href="#">
+                        <svg>
+                          <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-top-right"></use>
+                        </svg>
+                      </a>
+                      <picture class="d-flex w-100 h-auto">
+                        <img class="d-block w-100 h-auto object-fit-cover" src="./assets/images/dog.png" alt="">
+                      </picture>
+                      <a class="position-absolute bottom-0 btn bg-light w-100" href="#">Австралийская овчарка</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-info">
+                  <div class="swiper-control ms-auto">
+                    <button class="btn border p-2 rounded-circle border-black slider-btn slider-btn--prev">
+                      <svg>
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
+                      </svg>
+                    </button>
+                    <button class="btn border p-2 rounded-circle border-black slider-btn slider-btn--next">
+                      <svg>
+                        <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-2">
-              <div class="d-flex justify-content-end gap-3">
-                <button class="btn border p-2 rounded-circle border-black">
-                  <svg>
-                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
-                  </svg>
-                </button>
-                <button class="btn border p-2 rounded-circle border-black">
-                  <svg>
-                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-slim-right"></use>
-                  </svg>
-                </button>
-              </div>
+          </div>
+        </section>
+        <section class="pt-5">
+          <div class="row mt-5 mb-4">
+            <div class="col-12 pt-5">
+              <h2 class="h1 mt-2 mb-5 pb-2">Как взять биоматериал</h2>
+            </div>
+          </div>
+          <div class="row mb-5 pb-4">
+            <div class="col-md-5 col-sm-12">
+              <picture class="d-flex w-100 rounded-4 overflow-hidden">
+                <img class="d-block w-100" src="./assets/images/doc-with-cat.jpg" alt="">
+              </picture>
+            </div>
+            <div class="col-md-7 col-sm-12">
+              <h2 class="h2 mb-3">Подручными средствами</h2>
+              <p>
+                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее
+                осмысленного текста рыбы на русском языке, а начинающему оратору...
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 col-sm-12">
+              <h2 class="h2 mb-3">С помощью специального набора:</h2>
+              <p>
+                Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее
+                осмысленного текста рыбы на русском языке, а начинающему оратору...
+              </p>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <picture class="d-flex w-100 rounded-4 overflow-hidden">
+                <img class="d-block w-100" src="./assets/images/doc-with-dog.jpg" alt="">
+              </picture>
             </div>
           </div>
         </section>
@@ -247,6 +482,67 @@
     </div>
   </div>
 </main>
+<footer class="footer pt-5 mt-5 mb-5 pb-5">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-2 d-none d-xl-block"></div>
+      <div class="col-xl-9 col-lg-12">
+        <div class="card bg-light p-4 gap-3 rounded-4 overflow-hidden">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-5 col-sm-12">
+              <div class="d-flex flex-column gap-3">
+                <nav class="d-flex flex-md-row flex-sm-column gap-4">
+                  <a class="text-decoration-none" href="#">Оферта</a>
+                  <a class="text-decoration-none" href="#">О компании</a>
+                  <a class="text-decoration-none" href="#">Как сдать тест</a>
+                </nav>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <div class="d-flex justify-content-end gap-3">
+                <a href="#">
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-whatsapp"></use>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-tg"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-5 col-sm-12">
+              <div class="d-flex flex-column gap-3">
+                <p class="d-flex flex-column gap-2 m-0">
+                  <a class="text-decoration-none" href="#">Политика персональных данных</a>
+                  ООО “Ветгеномика”© 2024
+                </p>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12">
+              <div class="d-flex justify-content-end gap-3">
+                <a href="#">
+                  <img src="./assets/images/logo-isag.svg" alt="">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/logo-innovation.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 <!-- Это временная секция, здесь ссылки на все страницы. На продакшене ее не будет -->
 <section class="section">
     <div class="container">
