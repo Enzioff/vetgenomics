@@ -16,6 +16,9 @@ const initSlider = () => {
       case "single":
         initSingleSlider(el);
         break;
+      case "auto":
+        initAutoSlider(el);
+        break;
     }
   });
 };
@@ -41,13 +44,36 @@ const initDefaultSlider = (el) => {
   });
 };
 
+const initAutoSlider = (el) => {
+  const swiper = new Swiper(el, {
+    modules: [Navigation],
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: el.querySelector(".slider-btn--next"),
+      prevEl: el.querySelector(".slider-btn--prev")
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      }
+    }
+  });
+};
+
 const initSingleSlider = (el) => {
   const swiper = new Swiper(el, {
     modules: [Pagination],
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
-      el: el.querySelector(".swiper-pagination"),
+      el: el.querySelector(".swiper-pagination")
     }
   });
 };

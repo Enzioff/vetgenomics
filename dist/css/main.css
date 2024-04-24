@@ -2443,6 +2443,17 @@ svg {
   opacity: 1;
   visibility: visible;
 }
+@media only screen and (max-width: 768px) {
+  .swiper--auto .swiper-slide {
+    max-width: 80%;
+    margin-right: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .swiper--auto .swiper-slide:last-of-type {
+    margin-right: 0;
+  }
+}
 .swiper-info {
   display: -webkit-box;
   display: -webkit-flex;

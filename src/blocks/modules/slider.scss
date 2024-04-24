@@ -15,6 +15,21 @@
     }
   }
 
+  &--auto {
+    .swiper-slide {
+      @include r($md) {
+        max-width: 80%;
+        margin-right: 16px;
+      }
+
+      &:last-of-type {
+        @include r($md) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   &-info {
     display: flex;
     align-items: center;
