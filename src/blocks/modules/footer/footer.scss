@@ -1,0 +1,80 @@
+.footer {
+  margin-bottom: 230px;
+
+  @include r($lg) {
+    margin-bottom: 85px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 24px 24px 20px;
+    border-radius: 16px;
+
+    @include r($lg) {
+      padding: 16px 20px;
+    }
+    @include r($md) {
+      padding: 24px 24px 36px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    @include r($xxl) {
+      gap: 32px;
+    }
+    @include r($md) {
+      gap: 16px;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.84px;
+    letter-spacing: -0.014em;
+    text-decoration: none;
+    color: $c-dark80;
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: $c-dark60;
+
+    @include r($md) {
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      color: $c-dark60;
+      text-decoration: none;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+
+    @include r($md) {
+      justify-content: center;
+    }
+
+    img {
+      min-width: 70px;
+    }
+  }
+}

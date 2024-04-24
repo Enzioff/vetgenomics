@@ -1,0 +1,21 @@
+.title {
+  margin-bottom: 60px;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 48.4px;
+  letter-spacing: -0.014em;
+  color: $c-dark;
+
+  @include r($xl) {
+    margin-bottom: 48px;
+    font-size: 40px;
+  }
+  @include r($lg) {
+    margin-bottom: 32px;
+    font-size: 32px;
+  }
+  @include r($md) {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}

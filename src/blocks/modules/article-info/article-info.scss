@@ -1,0 +1,51 @@
+.article-info {
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.014em;
+    color: $c-dark;
+
+    @include r($xxl) {
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.32px;
+    letter-spacing: -0.014em;
+    color: $c-dark90;
+
+    @include r($xl) {
+      font-size: 16px;
+    }
+
+    strong {
+      font-weight: 600;
+      color: $c-navy;
+    }
+
+    &--small {
+      margin-bottom: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      letter-spacing: -0.014em;
+      color: $c-dark40;
+
+      @include r($xl) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 28px;
+  }
+}

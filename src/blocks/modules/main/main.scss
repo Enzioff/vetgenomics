@@ -1,0 +1,15 @@
+.main {
+  flex-grow: 1;
+  overflow-x: hidden;
+
+  &--page {
+    padding-top: 188px;
+
+    @include r($xl) {
+      padding-top: 182px;
+    }
+    @include r($lg) {
+      padding-top: 168px;
+    }
+  }
+}

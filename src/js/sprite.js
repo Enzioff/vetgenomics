@@ -6,6 +6,8 @@ import arrowSlimRight from "../assets/sprite/icon-arrow-slim-right.svg";
 import whatsapp from "../assets/sprite/icon-whatsapp.svg";
 import vk from "../assets/sprite/icon-vk.svg";
 import tg from "../assets/sprite/icon-tg.svg";
+import play from "../assets/sprite/icon-play.svg";
+import plus from "../assets/sprite/icon-plus.svg";
 
 export default {
     search,
@@ -15,5 +17,7 @@ export default {
     arrowSlimRight,
     whatsapp,
     vk,
-    tg
+    tg,
+    play,
+    plus
 };

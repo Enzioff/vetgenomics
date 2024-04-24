@@ -1,0 +1,10 @@
+.section {
+  margin-bottom: 160px;
+
+  @include r($xl) {
+    margin-bottom: 120px;
+  }
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+}

@@ -2,31 +2,49 @@ html {
     scroll-behavior: smooth;
 }
 
-//a,
-//svg,
-//button {
-//    transition: 0.3s all;
-//}
+a,
+svg,
+button {
+    transition: 0.3s all;
+}
 
 input,
 textarea,
-button {
+button,
+a {
     font-family: inherit;
 }
 
-//body {
-//    display: flex;
-//    flex-direction: column;
-//    min-height: 100vh;
-//    overflow-x: hidden;
-//}
-//
-//main {
-//    flex-grow: 1;
-//}
+a {
+    color: inherit;
+}
+
+button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 375px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $c-dark;
+    overflow-x: hidden;
+}
 
 svg {
     display: flex;
     width: 24px;
     height: 24px;
+}
+
+.logo {
+
 }

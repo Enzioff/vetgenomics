@@ -1,14 +1,41 @@
 $font-family-sans-serif: "Inter", sans-serif;
 $body-bg: #E1EDFA;
 $line-height-base: 1.2;
-//$info: #F1F8FFCC;
 
 $grid-breakpoints: (
         xs: 0,
-        sm: 576px,
+        sm: 1px,
         md: 768px,
         lg: 1024px,
         xl: 1280px,
         xxl: 1440px
 );
+
+$xxl: 1440;
+$xl: 1280;
+$lg: 1024;
+$md: 768;
+$sm: 375;
+$xs: 0;
+
+$c-white: #FFFFFF;
+$c-white80: #FFFFFFCC;
+$c-dark: #414663;
+$c-dark90: #414663E5;
+$c-dark80: #414663CC;
+$c-dark60: #41466399;
+$c-dark40: #41466366;
+$c-dark10: #4146631A;
+$c-dark2: #41466305;
+$c-navy: #3A72B3;
+$c-navy90: #3A72B3E5;
+$c-navy80: #3A72B3CC;
+$c-navy20: #3A72B333;
+$c-navy10: #3A72B31A;
+$c-lightBlue: #F1F8FF;
+$c-lightBlue80: #F1F8FFCC;
+$c-lightBlue30: #F1F8FF4D;
+$c-orange: #DAA86B;
+
+$c-transparent: #F1F8FF99;
 

@@ -1,0 +1,40 @@
+.form-search {
+  display: flex;
+  width: 100%;
+  max-width: 424px;
+
+  &__search-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 11px 48px 11px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.32px;
+    letter-spacing: -0.014em;
+    border: none;
+    background-color: transparent;
+    color: $c-dark60;
+
+    &::placeholder {
+      font: inherit;
+      color: $c-dark60;
+    }
+  }
+}

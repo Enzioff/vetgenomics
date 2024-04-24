@@ -1,7 +1,7 @@
 //{
 //  "extends": "stylelint-config-standard-scss",
 //  "rules": {
-//    "indentation": "tab",
+//    "indentation": "tag",
 //    "string-quotes": "double",
 //    "no-duplicate-selectors": true,
 //    "color-hex-case": "upper",

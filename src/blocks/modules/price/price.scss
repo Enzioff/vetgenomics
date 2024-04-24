@@ -1,0 +1,27 @@
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  &__text {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.76px;
+    letter-spacing: -0.014em;
+    color: $c-navy;
+
+    &--old {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      letter-spacing: -0.014em;
+      text-decoration: line-through;
+      color: $c-dark40;
+
+      @include r($xl) {
+        font-size: 13px;
+      }
+    }
+  }
+}

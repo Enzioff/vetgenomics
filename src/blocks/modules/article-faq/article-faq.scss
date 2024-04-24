@@ -1,0 +1,41 @@
+.article-faq {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+
+  &.active {
+    .article-faq__content {
+      height: auto;
+      padding: 0 24px 24px;
+      overflow: visible;
+    }
+    .article-faq__icon {
+      svg {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.014em;
+    color: $c-dark;
+  }
+
+  &__content {
+    height: 0;
+    padding: 0 24px;
+    overflow: hidden;
+  }
+}

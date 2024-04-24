@@ -1,0 +1,39 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8.5px 11px;
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: $c-navy80;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-radius: 8px;
+  background-color: $c-lightBlue80;
+  border: 1.4px solid $c-navy10;
+
+  &--accent {
+    color: $c-white;
+    background-color: $c-navy80;
+    border-color: $c-navy10;
+  }
+
+  &--dark {
+    color: $c-dark80;
+  }
+
+  &--link {
+    padding: 6px;
+    margin-left: auto;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: red;
+    }
+  }
+}

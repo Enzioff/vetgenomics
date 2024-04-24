@@ -1,1 +1,32 @@
+@import "./modules/main/main";
+@import "./modules/editor/editor";
+@import "./modules/section/section";
+
+// UI
+@import "./modules/UI/button/button";
+@import "./modules/UI/picture/picture";
+@import "./modules/UI/video-block/video-block";
+@import "./modules/UI/burger/burger";
+
+// UI Helpers
+@import "./modules/UI/helpers/transparent";
+@import "./modules/UI/helpers/text-overflow";
+
 @import "./modules/slider";
+@import "./modules/header/header";
+@import "./modules/nav/nav";
+@import "./modules/user-nav/user-nav";
+@import "./modules/form-search/form-search";
+@import "./modules/title/title";
+@import "./modules/price/price";
+@import "./modules/tags-list/tags-list";
+@import "./modules/tag/tag";
+@import "./modules/text-block/text-block";
+@import "./modules/social/social";
+@import "./modules/footer/footer";
+
+// Articles
+@import "./modules/article-card/article-card";
+@import "./modules/article-info/article-info";
+@import "./modules/article-card-preview/article-card-preview";
+@import "./modules/article-faq/article-faq";

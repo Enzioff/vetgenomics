@@ -13,7 +13,17 @@ module.exports = [
         template: "./src/index.html",
         filename: "index.html",
         inject: "body",
-        title: "Vetgenomics",
+        title: "Vetgenomics | Карточка теста",
+        head,
+        sectionHeader,
+        sectionFooter,
+        temp
+    }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/animal-detail.html",
+        filename: "animal-detail.html",
+        inject: "body",
+        title: "Vetgenomics | Карточка животного",
         head,
         sectionHeader,
         sectionFooter,

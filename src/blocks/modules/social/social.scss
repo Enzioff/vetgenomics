@@ -1,0 +1,9 @@
+.social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+
+  @include r($md) {
+    justify-content: center;
+  }
+}
