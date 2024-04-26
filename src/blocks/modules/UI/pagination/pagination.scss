@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.014em;
+    text-decoration: none;
+    color: $c-dark80;
+
+    &.active {
+      color: $c-white;
+      background-color: $c-navy;
+    }
+
+    &--closed {
+      border-color: transparent;
+    }
+  }
+}

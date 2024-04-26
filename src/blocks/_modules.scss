@@ -2,15 +2,17 @@
 @import "./modules/editor/editor";
 @import "./modules/section/section";
 
+// UI Helpers
+@import "./modules/UI/helpers/transparent";
+@import "./modules/UI/helpers/text-overflow";
+
 // UI
 @import "./modules/UI/button/button";
 @import "./modules/UI/picture/picture";
 @import "./modules/UI/video-block/video-block";
 @import "./modules/UI/burger/burger";
-
-// UI Helpers
-@import "./modules/UI/helpers/transparent";
-@import "./modules/UI/helpers/text-overflow";
+@import "./modules/UI/pagination/pagination";
+@import "./modules/UI/mobile-fixed-bottom/mobile-fixed-bottom";
 
 @import "./modules/slider";
 @import "./modules/header/header";
@@ -24,6 +26,7 @@
 @import "./modules/text-block/text-block";
 @import "./modules/social/social";
 @import "./modules/footer/footer";
+@import "./modules/subtitle/subtitle";
 
 // Articles
 @import "./modules/article-card/article-card";

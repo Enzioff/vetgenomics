@@ -29,4 +29,14 @@ module.exports = [
         sectionFooter,
         temp
     }),
+    new HtmlWebpackPlugin({
+        template: "./src/pages/animal-catalog.html",
+        filename: "animal-catalog.html",
+        inject: "body",
+        title: "Vetgenomics | Каталог животных",
+        head,
+        sectionHeader,
+        sectionFooter,
+        temp
+    }),
 ];

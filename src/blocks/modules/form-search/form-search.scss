@@ -3,6 +3,16 @@
   width: 100%;
   max-width: 424px;
 
+  @include r($md) {
+    max-width: 100%;
+  }
+
+  &--cube {
+    .form-search__search-block {
+      border-radius: 8px;
+    }
+  }
+
   &__search-block {
     position: relative;
     display: flex;
