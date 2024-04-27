@@ -11,8 +11,25 @@
     color: $c-dark80;
     text-decoration: none;
 
+    &:hover,
+    &:active {
+      background-color: $c-lightBlue;
+      border-color: $c-dark40
+    }
+
     @include r($xxl) {
       font-size: 13px;
+    }
+
+    &.active {
+      background-color: $c-lightBlue;
+      border-color: $c-dark40
+    }
+  }
+
+  &--light {
+    .nav__link {
+      color: $c-white80;
     }
   }
 }

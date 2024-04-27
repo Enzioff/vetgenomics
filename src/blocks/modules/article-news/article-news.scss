@@ -1,0 +1,67 @@
+.article-news {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: $c-lightBlue80;
+
+  &__picture {
+    display: flex;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.014em;
+    color: $c-dark;
+
+    @include r($xl) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 27px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.32px;
+    letter-spacing: -0.014em;
+    color: $c-dark60;
+    @include r($xl) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__time {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.32px;
+    letter-spacing: -0.014em;
+    color: $c-dark40;
+    @include r($xl) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

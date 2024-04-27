@@ -47,4 +47,20 @@
       color: $c-dark60;
     }
   }
+
+  &__icon {
+    fill: $c-dark;
+  }
+
+  &--light {
+    .form-search__input {
+      color: $c-white60;
+      &::placeholder {
+        color: $c-white60;
+      }
+    }
+    .form-search__icon {
+      fill: $c-white60;
+    }
+  }
 }

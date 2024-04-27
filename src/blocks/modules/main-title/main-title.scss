@@ -1,0 +1,18 @@
+.main-title {
+  font-size: 130px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.014em;
+  color: $c-white;
+
+  @include r($xl) {
+    font-size: 96px;
+  }
+
+  @include r($lg) {
+    font-size: 92px;
+  }
+  @include r($md) {
+    font-size: 51px;
+  }
+}

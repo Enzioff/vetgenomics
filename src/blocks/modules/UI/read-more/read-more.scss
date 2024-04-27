@@ -1,0 +1,27 @@
+.read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.32px;
+  letter-spacing: -0.014em;
+  text-decoration: none;
+  color: $c-dark80;
+
+  @include r($xl) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &:hover,
+  &:active {
+    color: $c-dark;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

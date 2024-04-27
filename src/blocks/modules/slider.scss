@@ -13,6 +13,23 @@
       opacity: 1;
       visibility: visible;
     }
+    &--xxl {
+      @include r($xxl) {
+        overflow: visible !important;
+
+        .swiper-slide {
+          opacity: 0;
+          visibility: hidden;
+          transition: .2s linear;
+        }
+
+        .swiper-slide-visible,
+        .swiper-slide-visible ~ .swiper-slide {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 
   &--auto {
@@ -50,9 +67,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 48px;
-    border: 1px solid $c-dark;
+    border: 1px solid $c-dark80;
     min-width: 44px;
     height: 44px;
+
+    &:hover {
+      border-color: $c-dark;
+    }
 
     svg {
       width: 21px;

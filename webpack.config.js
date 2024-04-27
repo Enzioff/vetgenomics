@@ -11,6 +11,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Insludes
 const head = fs.readFileSync(__dirname + '/src/includes/head.html');
 const sectionHeader = fs.readFileSync(__dirname + '/src/includes/section-header.html');
+const sectionHeaderIndex = fs.readFileSync(__dirname + '/src/includes/section-header-index.html');
 const sectionFooter = fs.readFileSync(__dirname + '/src/includes/section-footer.html');
 
 module.exports = {

@@ -16,10 +16,24 @@
   background-color: $c-lightBlue80;
   border: 1.4px solid $c-navy10;
 
+  transition: .2s linear;
+
+  &:hover,
+  &:active {
+    color: $c-navy;
+    background-color: $c-lightBlue;
+  }
+
   &--accent {
     color: $c-white;
     background-color: $c-navy80;
     border-color: $c-navy10;
+
+    &:hover,
+    &:active {
+      background-color: $c-navy;
+      color: $c-white;
+    }
   }
 
   &--dark {

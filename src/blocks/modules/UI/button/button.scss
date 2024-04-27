@@ -21,11 +21,23 @@
   }
 
   &--small {
-    width: auto;
+    width: max-content;
     padding: 11px 20px;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.014em;
+  }
+
+  &--accent {
+    &:hover {
+      background-color: $c-navy80;
+      border-color: $c-navy20;
+      color: $c-white;
+    }
+    &:active {
+      background-color: $c-navy;
+      border-color: $c-navy20;
+    }
   }
 
   &--auto {
@@ -45,6 +57,9 @@
     color: $c-dark80;
     border-color: $c-dark80;
     background-color: transparent;
+    &:hover {
+      border-color: $c-dark;
+    }
   }
 
   &--transparent {
@@ -55,5 +70,10 @@
     background: $c-transparent;
     backdrop-filter: blur(3px);
     border-color: $c-dark2;
+    &:hover,
+    &:active {
+      background: $c-transparent;
+      border-color: $c-dark2;
+    }
   }
 }

@@ -3167,7 +3167,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "icon-search-usage",
-      viewBox: "0 0 24 24",
+      viewBox: "0 0 20 20",
       url: "/assets/sprite/" + "sprite.svg#icon-search-usage",
       toString: function () {
         return this.url;
@@ -3233,10 +3233,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/slider.js":
-/*!**************************!*\
-  !*** ./src/js/slider.js ***!
-  \**************************/
+/***/ "./src/js/app/slider.js":
+/*!******************************!*\
+  !*** ./src/js/app/slider.js ***!
+  \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3320,6 +3320,31 @@ const initSingleSlider = (el) => {
     pagination: {
       el: el.querySelector(".swiper-pagination")
     }
+  });
+};
+
+/***/ }),
+
+/***/ "./src/js/app/toggle.js":
+/*!******************************!*\
+  !*** ./src/js/app/toggle.js ***!
+  \******************************/
+/***/ (function() {
+
+document.addEventListener("DOMContentLoaded", () => {
+  initToggle();
+});
+
+const initToggle = () => {
+  const toggleEls = document.querySelectorAll("[data-toggle]");
+  toggleEls.forEach(element => {
+    const innerElement = element.querySelector("[data-toggle-inner]");
+    element.addEventListener("click", function() {
+      this.classList.toggle("active");
+    });
+    innerElement.addEventListener("click", (evt) => {
+      evt.stopPropagation();
+    });
   });
 };
 
@@ -13842,12 +13867,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/main.scss */ "./src/css/main.scss");
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
 /* harmony import */ var bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
+/* harmony import */ var _app_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app/slider */ "./src/js/app/slider.js");
+/* harmony import */ var _app_toggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app/toggle */ "./src/js/app/toggle.js");
+/* harmony import */ var _app_toggle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_app_toggle__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
+
+
+// APP
 
 
 

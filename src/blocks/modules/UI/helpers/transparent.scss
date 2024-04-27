@@ -3,4 +3,8 @@
   border-radius: 48px;
   border: 1px solid $c-dark10;
   backdrop-filter: blur(3px);
+
+  &--dark {
+    background-color: $c-transparent-dark;
+  }
 }

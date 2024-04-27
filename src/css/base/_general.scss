@@ -45,6 +45,7 @@ svg {
     height: 24px;
 }
 
-.logo {
-
+*[disabled] {
+    opacity: .6 !important;
+    pointer-events: none !important;
 }

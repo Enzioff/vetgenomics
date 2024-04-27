@@ -1,0 +1,19 @@
+.intro-main {
+  position: relative;
+  padding-bottom: 46px;
+  text-align: right;
+  z-index: 2;
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.76px;
+    letter-spacing: -0.014em;
+    color: $c-white80;
+
+    @include r($xl) {
+      font-size: 22px;
+      line-height: 27.28px;
+    }
+  }
+}

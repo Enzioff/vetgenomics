@@ -11,15 +11,16 @@ $grid-breakpoints: (
         xxl: 1440px
 );
 
-$xxl: 1440;
-$xl: 1280;
-$lg: 1024;
-$md: 768;
+$xxl: 1439;
+$xl: 1279;
+$lg: 1023;
+$md: 767;
 $sm: 375;
 $xs: 0;
 
 $c-white: #FFFFFF;
 $c-white80: #FFFFFFCC;
+$c-white60: #FFFFFF99;
 $c-dark: #414663;
 $c-dark90: #414663E5;
 $c-dark80: #414663CC;
@@ -38,4 +39,5 @@ $c-lightBlue30: #F1F8FF4D;
 $c-orange: #DAA86B;
 
 $c-transparent: #F1F8FF99;
+$c-transparent-dark: #F1F8FF33;
 
