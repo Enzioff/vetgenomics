@@ -8,6 +8,7 @@ import vk from "../assets/sprite/icon-vk.svg";
 import tg from "../assets/sprite/icon-tg.svg";
 import play from "../assets/sprite/icon-play.svg";
 import plus from "../assets/sprite/icon-plus.svg";
+import cross from "../assets/sprite/icon-cross.svg";
 
 export default {
     search,
@@ -19,5 +20,6 @@ export default {
     vk,
     tg,
     play,
-    plus
+    plus,
+    cross
 };

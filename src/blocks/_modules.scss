@@ -14,6 +14,7 @@
 @import "./modules/UI/pagination/pagination";
 @import "./modules/UI/mobile-fixed-bottom/mobile-fixed-bottom";
 @import "./modules/UI/read-more/read-more";
+@import "./modules/UI/breadcrumbs/breadcrumbs";
 
 @import "./modules/slider";
 @import "./modules/header/header";
@@ -30,6 +31,7 @@
 @import "./modules/subtitle/subtitle";
 @import "./modules/intro-main/intro-main";
 @import "./modules/main-title/main-title";
+@import "./modules/search-list/search-list";
 
 // Articles
 @import "./modules/article-card/article-card";
@@ -37,3 +39,4 @@
 @import "./modules/article-card-preview/article-card-preview";
 @import "./modules/article-faq/article-faq";
 @import "./modules/article-news/article-news";
+@import "./modules/article-search/article-search";

@@ -1,8 +1,9 @@
 .mobile-fixed-bottom {
+  transition: .2s linear;
   @include r($md) {
     position: fixed;
     left: 0;
-    bottom: 44px;
+    bottom: -50px;
     width: 100%;
   }
 }

@@ -1,0 +1,29 @@
+.search-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: auto;
+  margin-top: -120px;
+  max-width: 486px;
+  padding-top: 88px;
+  padding-bottom: 50vh;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  @include r($xl) {
+    max-width: 400px;
+  }
+  @include r($lg) {
+    padding-bottom: 20vh;
+    max-width: 334px;
+  }
+  @include r($md) {
+    padding-bottom: 74px;
+    max-width: 100%;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}

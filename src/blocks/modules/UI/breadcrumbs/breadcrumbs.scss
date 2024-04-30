@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.4px;
+    letter-spacing: -0.014em;
+    text-decoration: none;
+    color: $c-dark60;
+    &:not(:first-child) {
+      &::before {
+        content: '';
+        display: flex;
+        width: 2px;
+        height: 2px;
+        background-color: $c-dark60;
+      }
+    }
+  }
+}

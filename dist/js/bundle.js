@@ -3100,6 +3100,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/sprite/icon-cross.svg":
+/*!******************************************!*\
+  !*** ./src/assets/sprite/icon-cross.svg ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "icon-cross-usage",
+      viewBox: "0 0 24 24",
+      url: "/assets/sprite/" + "sprite.svg#icon-cross-usage",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/assets/sprite/icon-handbag.svg":
 /*!********************************************!*\
   !*** ./src/assets/sprite/icon-handbag.svg ***!
@@ -3233,6 +3252,160 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/app/mobileMenu.js":
+/*!**********************************!*\
+  !*** ./src/js/app/mobileMenu.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helpers_toggleClasses__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/toggleClasses */ "./src/js/helpers/toggleClasses.js");
+/* harmony import */ var _helpers_removeClasses__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/removeClasses */ "./src/js/helpers/removeClasses.js");
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileMenu();
+});
+
+const initMobileMenu = () => {
+  const burger = document.querySelector("[data-burger]");
+  const backdrop = document.querySelector("[data-backdrop]");
+  const navigation = document.querySelector("[data-nav]");
+  const scrollElement = document.querySelector(".mobile-fixed-bottom");
+  const isMobile = window.matchMedia("(min-width: 1280px)");
+
+  if (burger || backdrop || navigation) {
+    burger.addEventListener("click", () => {
+      (0,_helpers_toggleClasses__WEBPACK_IMPORTED_MODULE_0__.toggleClasses)([burger, backdrop, navigation]);
+      burger.classList.contains("active")
+        ? scrollElement.classList.add("showScrollElement")
+        : scrollElement.classList.remove("showScrollElement");
+    });
+
+    isMobile.addEventListener("change", (evt) => {
+      console.log(evt.matches)
+      if (evt.matches) {
+        (0,_helpers_removeClasses__WEBPACK_IMPORTED_MODULE_1__.removeClasses)([burger, backdrop, navigation, scrollElement])
+      }
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/app/search.js":
+/*!******************************!*\
+  !*** ./src/js/app/search.js ***!
+  \******************************/
+/***/ (function() {
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSearch();
+  showMobileHiddenElementWithScroll();
+});
+
+const initSearch = () => {
+  const search = document.querySelector("[data-search]");
+  if (!search) return;
+
+  const isMobile = matchMedia("(max-width: 767px)");
+
+  const backdrop = document.querySelector("[data-backdrop]");
+  const searchInput = search.querySelector("input");
+  const searchButton = search.querySelector('[data-search-button]')
+  const iconSearch = searchButton.querySelector("[data-search-icon=\"search\"]");
+  const iconCross = searchButton.querySelector("[data-search-icon=\"cross\"]");
+  const searchClose = document.querySelector('[data-search-close]');
+  const userCartButton = document.querySelector('[data-cart]');
+  const userLangSwitcherButton = document.querySelector('[data-lang-switcher]');
+  const userBurgerButton = document.querySelector('[data-burger]');
+  const searchList = document.querySelector('[data-search-list]');
+  const findedSearchItems = searchList.querySelectorAll('.article-search')
+  const logo = document.querySelector('[data-logo]')
+
+  searchInput.addEventListener("focus", () => {
+    search.classList.add("active");
+    backdrop.classList.add("active");
+    iconSearch.style.display = "none";
+    iconCross.style.display = "flex";
+    searchClose.style.display = "flex";
+    userCartButton.style.display = "none";
+    userLangSwitcherButton.style.display = "none";
+    userBurgerButton.style.display = "none";
+    searchList.style.display = 'flex';
+    if (isMobile.matches) {
+      logo.style.display = 'none';
+    }
+  });
+  searchButton.addEventListener("click", () => {
+    searchInput.value = ''
+  });
+  searchClose.addEventListener('click', () => {
+    search.classList.remove("active");
+    backdrop.classList.remove("active");
+    iconSearch.style.display = "flex";
+    iconCross.style.display = "none";
+    searchClose.style.display = "none";
+    userCartButton.style.display = "flex";
+    userLangSwitcherButton.style.display = "flex";
+    userBurgerButton.style.display = "flex";
+    searchList.style.display = 'none';
+    if (isMobile.matches) {
+      logo.style.display = 'block';
+    }
+  })
+
+  isMobile.addEventListener('change', (e) => {
+    if (e.matches) {
+      if (search.classList.contains('active')) {
+        logo.style.display = 'none';
+      } else {
+        logo.style.display = 'block';
+      }
+    }
+  })
+
+  console.log(isMobile.matches)
+
+
+  searchInput.addEventListener('input', () => {
+      findedSearchItems.forEach(element => {
+        const title = element.querySelector('.article-search__title');
+        const text = element.querySelector('.article-search__text');
+        searchInput.value = searchInput.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const pattern = new RegExp(`${searchInput.value}`, "gi");
+        title.innerHTML = title.textContent.replace(pattern, match => `<mark>${match}</mark>`)
+        text.innerHTML = text.textContent.replace(pattern, match => `<mark>${match}</mark>`)
+      })
+  })
+};
+
+const showMobileHiddenElementWithScroll = () => {
+  const scrollElement = document.querySelector(".mobile-fixed-bottom");
+
+  let lastScrollTop = 0;
+  window.addEventListener("scroll", () => {
+    document.activeElement && document.activeElement.blur();
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      if (scrollElement.classList.contains("showScrollElement")) {
+        scrollElement.classList.remove("showScrollElement");
+      }
+    } else {
+      if (!scrollElement.classList.contains("showScrollElement")) {
+        scrollElement.classList.add("showScrollElement");
+      }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+};
+
+/***/ }),
+
 /***/ "./src/js/app/slider.js":
 /*!******************************!*\
   !*** ./src/js/app/slider.js ***!
@@ -3350,6 +3523,85 @@ const initToggle = () => {
 
 /***/ }),
 
+/***/ "./src/js/helpers/removeClasses.js":
+/*!*****************************************!*\
+  !*** ./src/js/helpers/removeClasses.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   removeClasses: function() { return /* binding */ removeClasses; }
+/* harmony export */ });
+const removeClasses = (
+  selector,
+  activeClass = "active"
+) => {
+  if (Array.isArray(selector)) {
+    selector.forEach(el => {
+      el.classList.remove(activeClass);
+    });
+  } else {
+    selector.classList.remove(activeClass);
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/helpers/toggleClasses.js":
+/*!*****************************************!*\
+  !*** ./src/js/helpers/toggleClasses.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   toggleClasses: function() { return /* binding */ toggleClasses; }
+/* harmony export */ });
+const toggleClasses = (
+  selector,
+  activeClass = "active",
+  options = { toggle: false, active: false }
+) => {
+  if (options.toggle) {
+    if (Array.isArray(selector)) {
+      selector.forEach((item) => {
+        item.classList.toggle(activeClass);
+      });
+    } else {
+      selector.classList.toggle(activeClass);
+    }
+  } else if (options.active) {
+    if (Array.isArray(selector)) {
+      selector.forEach((item) => {
+        if (item.classList.contains(activeClass)) {
+          item.classList.remove(activeClass);
+        } else {
+          item.classList.add(activeClass);
+        }
+      });
+    } else {
+      if (selector.classList.contains(activeClass)) {
+        selector.classList.remove(activeClass);
+      } else {
+        selector.classList.add(activeClass);
+      }
+    }
+  } else {
+    if (Array.isArray(selector)) {
+      selector.forEach((item) => {
+        item.classList.toggle(activeClass);
+      });
+    } else {
+      selector.classList.toggle(activeClass);
+    }
+  }
+};
+
+/***/ }),
+
 /***/ "./src/js/sprite.js":
 /*!**************************!*\
   !*** ./src/js/sprite.js ***!
@@ -3368,6 +3620,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_sprite_icon_tg_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/sprite/icon-tg.svg */ "./src/assets/sprite/icon-tg.svg");
 /* harmony import */ var _assets_sprite_icon_play_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/sprite/icon-play.svg */ "./src/assets/sprite/icon-play.svg");
 /* harmony import */ var _assets_sprite_icon_plus_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/sprite/icon-plus.svg */ "./src/assets/sprite/icon-plus.svg");
+/* harmony import */ var _assets_sprite_icon_cross_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/sprite/icon-cross.svg */ "./src/assets/sprite/icon-cross.svg");
+
 
 
 
@@ -3389,7 +3643,8 @@ __webpack_require__.r(__webpack_exports__);
     vk: _assets_sprite_icon_vk_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
     tg: _assets_sprite_icon_tg_svg__WEBPACK_IMPORTED_MODULE_7__["default"],
     play: _assets_sprite_icon_play_svg__WEBPACK_IMPORTED_MODULE_8__["default"],
-    plus: _assets_sprite_icon_plus_svg__WEBPACK_IMPORTED_MODULE_9__["default"]
+    plus: _assets_sprite_icon_plus_svg__WEBPACK_IMPORTED_MODULE_9__["default"],
+    cross: _assets_sprite_icon_cross_svg__WEBPACK_IMPORTED_MODULE_10__["default"]
 });
 
 
@@ -13870,6 +14125,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app/slider */ "./src/js/app/slider.js");
 /* harmony import */ var _app_toggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app/toggle */ "./src/js/app/toggle.js");
 /* harmony import */ var _app_toggle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_app_toggle__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _app_mobileMenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app/mobileMenu */ "./src/js/app/mobileMenu.js");
+/* harmony import */ var _app_search__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app/search */ "./src/js/app/search.js");
+/* harmony import */ var _app_search__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_app_search__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -13878,6 +14136,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // APP
+
+
 
 
 

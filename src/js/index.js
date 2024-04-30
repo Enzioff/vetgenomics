@@ -8,3 +8,5 @@ import "bootstrap/dist/js/bootstrap.min";
 // APP
 import "./app/slider";
 import "./app/toggle";
+import "./app/mobileMenu";
+import "./app/search";
