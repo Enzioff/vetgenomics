@@ -3314,16 +3314,16 @@ const initSearch = () => {
 
   const backdrop = document.querySelector("[data-backdrop]");
   const searchInput = search.querySelector("input");
-  const searchButton = search.querySelector('[data-search-button]')
+  const searchButton = search.querySelector("[data-search-button]");
   const iconSearch = searchButton.querySelector("[data-search-icon=\"search\"]");
   const iconCross = searchButton.querySelector("[data-search-icon=\"cross\"]");
-  const searchClose = document.querySelector('[data-search-close]');
-  const userCartButton = document.querySelector('[data-cart]');
-  const userLangSwitcherButton = document.querySelector('[data-lang-switcher]');
-  const userBurgerButton = document.querySelector('[data-burger]');
-  const searchList = document.querySelector('[data-search-list]');
-  const findedSearchItems = searchList.querySelectorAll('.article-search')
-  const logo = document.querySelector('[data-logo]')
+  const searchClose = document.querySelector("[data-search-close]");
+  const userCartButton = document.querySelector("[data-cart]");
+  const userLangSwitcherButton = document.querySelector("[data-lang-switcher]");
+  const userBurgerButton = document.querySelector("[data-burger]");
+  const searchList = document.querySelector("[data-search-list]");
+  const findedSearchItems = searchList.querySelectorAll(".article-search");
+  const logo = document.querySelector("[data-logo]");
 
   searchInput.addEventListener("focus", () => {
     search.classList.add("active");
@@ -3334,15 +3334,15 @@ const initSearch = () => {
     userCartButton.style.display = "none";
     userLangSwitcherButton.style.display = "none";
     userBurgerButton.style.display = "none";
-    searchList.style.display = 'flex';
+    searchList.style.display = "flex";
     if (isMobile.matches) {
-      logo.style.display = 'none';
+      logo.style.display = "none";
     }
   });
   searchButton.addEventListener("click", () => {
-    searchInput.value = ''
+    searchInput.value = "";
   });
-  searchClose.addEventListener('click', () => {
+  searchClose.addEventListener("click", () => {
     search.classList.remove("active");
     backdrop.classList.remove("active");
     iconSearch.style.display = "flex";
@@ -3351,35 +3351,39 @@ const initSearch = () => {
     userCartButton.style.display = "flex";
     userLangSwitcherButton.style.display = "flex";
     userBurgerButton.style.display = "flex";
-    searchList.style.display = 'none';
+    searchList.style.display = "none";
     if (isMobile.matches) {
-      logo.style.display = 'block';
+      logo.style.display = "block";
     }
-  })
+  });
 
-  isMobile.addEventListener('change', (e) => {
+  searchList.addEventListener("scroll", () => {
+    document.activeElement && document.activeElement.blur();
+  });
+
+  isMobile.addEventListener("change", (e) => {
     if (e.matches) {
-      if (search.classList.contains('active')) {
-        logo.style.display = 'none';
+      if (search.classList.contains("active")) {
+        logo.style.display = "none";
       } else {
-        logo.style.display = 'block';
+        logo.style.display = "block";
       }
     }
-  })
+  });
 
-  console.log(isMobile.matches)
+  console.log(isMobile.matches);
 
 
-  searchInput.addEventListener('input', () => {
-      findedSearchItems.forEach(element => {
-        const title = element.querySelector('.article-search__title');
-        const text = element.querySelector('.article-search__text');
-        searchInput.value = searchInput.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const pattern = new RegExp(`${searchInput.value}`, "gi");
-        title.innerHTML = title.textContent.replace(pattern, match => `<mark>${match}</mark>`)
-        text.innerHTML = text.textContent.replace(pattern, match => `<mark>${match}</mark>`)
-      })
-  })
+  searchInput.addEventListener("input", () => {
+    findedSearchItems.forEach(element => {
+      const title = element.querySelector(".article-search__title");
+      const text = element.querySelector(".article-search__text");
+      searchInput.value = searchInput.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const pattern = new RegExp(`${searchInput.value}`, "gi");
+      title.innerHTML = title.textContent.replace(pattern, match => `<mark>${match}</mark>`);
+      text.innerHTML = text.textContent.replace(pattern, match => `<mark>${match}</mark>`);
+    });
+  });
 };
 
 const showMobileHiddenElementWithScroll = () => {

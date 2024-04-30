@@ -2914,6 +2914,11 @@ svg {
     max-width: 400px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .form-search.active {
+    max-width: 100%;
+  }
+}
 .form-search--cube .form-search__search-block {
   border-radius: 8px;
 }

@@ -13,6 +13,9 @@
     @include r($xl) {
       max-width: 400px;
     }
+    @include r($md) {
+      max-width: 100%;
+    }
   }
 
   &--cube {
