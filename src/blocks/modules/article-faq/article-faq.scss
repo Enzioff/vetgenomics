@@ -5,7 +5,7 @@
 
   &.active {
     .article-faq__content {
-      height: auto;
+      grid-template-rows: 1fr;
       padding: 0 24px 24px;
       overflow: visible;
     }
@@ -34,8 +34,10 @@
   }
 
   &__content {
-    height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
     padding: 0 24px;
     overflow: hidden;
+    transition: .2s ease-in-out;
   }
 }

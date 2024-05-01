@@ -2145,7 +2145,7 @@ body {
   min-height: 100vh;
   min-width: 375px;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1 !important;
   color: #414663;
   overflow-x: hidden;
 }
@@ -2189,6 +2189,10 @@ svg {
   }
 }
 
+.editor {
+  overflow: hidden;
+  min-height: 0;
+}
 .editor p {
   margin-bottom: 0;
   font-size: 18px;
@@ -2377,7 +2381,7 @@ svg {
   font-weight: 500;
   letter-spacing: -0.014em;
 }
-.button--accent:hover {
+.button--accent:hover, .button--accent:focus {
   background-color: rgba(58, 114, 179, 0.8);
   border-color: rgba(58, 114, 179, 0.2);
   color: #FFFFFF;
@@ -2385,6 +2389,7 @@ svg {
 .button--accent:active {
   background-color: #3A72B3;
   border-color: rgba(58, 114, 179, 0.2);
+  color: #FFFFFF;
 }
 .button--auto {
   width: auto;
@@ -2904,7 +2909,7 @@ svg {
 }
 @media only screen and (max-width: 767px) {
   .form-search {
-    max-width: 100%;
+    max-width: 540px;
   }
 }
 .form-search.active {
@@ -2917,7 +2922,7 @@ svg {
 }
 @media only screen and (max-width: 767px) {
   .form-search.active {
-    max-width: 100%;
+    max-width: 540px;
   }
 }
 .form-search--cube .form-search__search-block {
@@ -3376,6 +3381,7 @@ svg {
   padding-top: 88px;
   padding-bottom: 50vh;
   max-height: 100vh;
+  scrollbar-width: none;
   overflow-y: auto;
 }
 @media only screen and (max-width: 1279px) {
@@ -3529,6 +3535,8 @@ svg {
   left: 12px;
   bottom: 12px;
   width: calc(100% - 24px);
+  padding: 12px;
+  line-height: 20px;
 }
 @media only screen and (max-width: 1439px) {
   .article-card-preview__button {
@@ -3557,7 +3565,7 @@ svg {
   border-radius: 16px;
 }
 .article-faq.active .article-faq__content {
-  height: auto;
+  grid-template-rows: 1fr;
   padding: 0 24px 24px;
   overflow: visible;
 }
@@ -3590,9 +3598,12 @@ svg {
   color: #414663;
 }
 .article-faq__content {
-  height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   padding: 0 24px;
   overflow: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .article-news {

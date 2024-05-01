@@ -13,34 +13,44 @@
 
 <body class="body bg-body">
 <header class="header">
-  <div class="container">
+  <div class="container position-relative z-1">
     <div class="row d-flex justify-content-between align-items-center pe-auto" style="margin-bottom: 32px;">
-      <div class="col-2">
-        <a class="logo" href="#">
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <a class="logo" href="#" data-logo>
           <img src="./assets/images/logo.svg" alt="">
         </a>
       </div>
-      <div class="col-md-4 col-sm-12 mobile-fixed-bottom">
-        <form action="#" class="form-search">
+      <div class="col-md-6 col-sm-12 d-flex justify-content-center mobile-fixed-bottom">
+        <form action="#" class="form-search" data-search>
           <label class="form-search__search-block transparent">
             <input type="text" placeholder="Поиск" class="form-search__input">
-            <button type="submit" class="form-search__button">
+            <button type="button" class="form-search__button" data-search-button="search" style="display: flex">
               <svg class="form-search__icon">
                 <use xlink:href="./assets/sprite/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+            <button type="button" class="form-search__button" data-search-button="cross" style="display: none">
+              <svg class="form-search__icon">
+                <use xlink:href="./assets/sprite/sprite.svg#icon-cross"></use>
               </svg>
             </button>
           </label>
         </form>
       </div>
-      <div class="col-2">
+      <div class="col-lg-2 col-md-3 col-sm-6">
         <div class="user-nav">
-          <button class="user-nav__button user-nav__button--circle transparent">
+          <button class="user-nav__button user-nav__button--circle transparent" data-cart>
             <svg>
               <use xlink:href="./assets/sprite/sprite.svg#icon-handbag"></use>
             </svg>
           </button>
-          <button class="user-nav__button user-nav__button--circle transparent">En</button>
-          <div class="user-nav__button user-nav__button--circle transparent d-lg-flex d-xl-none">
+          <button class="user-nav__button user-nav__button--circle transparent" data-lang-switcher>En</button>
+          <button class="user-nav__button user-nav__button--circle transparent" style="display: none" data-search-close>
+            <svg>
+              <use xlink:href="./assets/sprite/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <div class="user-nav__button user-nav__button--circle transparent d-lg-flex d-xl-none" data-burger>
             <div class="burger">
               <span class="burger__element"></span>
             </div>
@@ -48,25 +58,223 @@
         </div>
       </div>
     </div>
-    <div class="row d-none d-xl-block">
-      <div class="col-2">
-        <nav class="nav d-flex flex-column align-items-start">
-          <a class="nav__link transparent" href="#">Генетические тесты</a>
-          <a class="nav__link transparent" href="#">Каталог тестов</a>
-          <a class="nav__link transparent" href="#">Как сделать анализ</a>
-          <a class="nav__link transparent" href="#">Заказ и отправка</a>
-          <a class="nav__link transparent" href="#">Животные</a>
-          <a class="nav__link transparent" href="#">Собаки</a>
-          <a class="nav__link transparent" href="#">Кошки</a>
-          <a class="nav__link transparent" href="#">Лошади</a>
-          <a class="nav__link transparent" href="#">Птицы</a>
-          <a class="nav__link transparent" href="#">Коровы</a>
-          <a class="nav__link transparent" href="#">Другие</a>
-          <a class="nav__link transparent" href="#">Контакты</a>
+    <div class="row">
+      <div class="col-xl-2 col-md-12">
+        <nav class="main-nav flex-column align-items-xl-start align-items-md-end" data-nav>
+          <a class="main-nav__link transparent" href="#">Генетические тесты</a>
+          <a class="main-nav__link transparent" href="#">Каталог тестов</a>
+          <a class="main-nav__link transparent" href="#">Как сделать анализ</a>
+          <a class="main-nav__link transparent" href="#">Заказ и отправка</a>
+          <a class="main-nav__link transparent" href="#">Животные</a>
+          <a class="main-nav__link transparent" href="#">Собаки</a>
+          <a class="main-nav__link transparent" href="#">Кошки</a>
+          <a class="main-nav__link transparent" href="#">Лошади</a>
+          <a class="main-nav__link transparent" href="#">Птицы</a>
+          <a class="main-nav__link transparent" href="#">Коровы</a>
+          <a class="main-nav__link transparent" href="#">Другие</a>
+          <a class="main-nav__link transparent" href="#">Контакты</a>
         </nav>
+      </div>
+      <div class="col-xl-1"></div>
+      <div class="col-xl-6 d-flex justify-content-center">
+        <div class="search-list" style="display: none" data-search-list>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="article-search">
+            <div class="breadcrumbs">
+              <a href="#" class="breadcrumbs__link">Собаки</a>
+              <a href="#" class="breadcrumbs__link">Породы</a>
+              <a href="#" class="breadcrumbs__link">Белая швейцарская овчарка</a>
+            </div>
+            <div class="article-search__info">
+              <picture class="article-search__picture">
+                <img src="./assets/images/dog.png" alt="">
+              </picture>
+              <div class="article-search__detail">
+                <h3 class="article-search__title">Австралийская овчарка</h3>
+                <p class="article-search__text">
+                  Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                </p>
+                <a href="#" class="read-more ms-auto">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="./assets/sprite/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </div>
+  <div class="header__backdrop" data-backdrop></div>
 </header>
 <main class="main main--page">
   <div class="container">

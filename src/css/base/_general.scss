@@ -34,7 +34,7 @@ body {
     min-height: 100vh;
     min-width: 375px;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1 !important;
     color: $c-dark;
     overflow-x: hidden;
 }

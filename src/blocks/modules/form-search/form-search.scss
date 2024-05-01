@@ -5,7 +5,7 @@
   transition: .2s linear;
 
   @include r($md) {
-    max-width: 100%;
+    max-width: 540px;
   }
 
   &.active {
@@ -14,7 +14,7 @@
       max-width: 400px;
     }
     @include r($md) {
-      max-width: 100%;
+      max-width: 540px;
     }
   }
 

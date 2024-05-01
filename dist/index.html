@@ -24,11 +24,13 @@
         <form action="#" class="form-search" data-search>
           <label class="form-search__search-block transparent">
             <input type="text" placeholder="Поиск" class="form-search__input">
-            <button type="button" class="form-search__button" data-search-button>
-              <svg class="form-search__icon" style="display: flex" data-search-icon="search">
+            <button type="button" class="form-search__button" data-search-button="search" style="display: flex">
+              <svg class="form-search__icon">
                 <use xlink:href="./assets/sprite/sprite.svg#icon-search"></use>
               </svg>
-              <svg class="form-search__icon" style="display: none" data-search-icon="cross">
+            </button>
+            <button type="button" class="form-search__button" data-search-button="cross" style="display: none">
+              <svg class="form-search__icon">
                 <use xlink:href="./assets/sprite/sprite.svg#icon-cross"></use>
               </svg>
             </button>
@@ -567,7 +569,7 @@
             </div>
           </div>
           <div class="row align-items-center flex-sm-column flex-md-row mb-4">
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-8 mb-sm-4 pb-sm-2 pb-md-0 mb-md-0">
               <picture class="picture">
                 <img src="./assets/images/question-1.png" alt="">
               </picture>
@@ -596,14 +598,14 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-8 mb-sm-4 pb-sm-2 pb-md-0 mb-md-0">
               <picture class="picture">
                 <img src="./assets/images/question-2.png" alt="">
               </picture>
             </div>
           </div>
           <div class="row align-items-center flex-sm-column flex-md-row mb-4">
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-8 mb-sm-4 pb-sm-2 pb-md-0 mb-md-0">
               <picture class="picture">
                 <img src="./assets/images/question-3.png" alt="">
               </picture>
@@ -638,7 +640,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-8">
+            <div class="col-md-4 col-sm-8 mb-sm-4 pb-sm-2 pb-md-0 mb-md-0">
               <picture class="picture">
                 <img src="./assets/images/question-2.png" alt="">
               </picture>

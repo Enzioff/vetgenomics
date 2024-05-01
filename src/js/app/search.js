@@ -11,9 +11,8 @@ const initSearch = () => {
 
   const backdrop = document.querySelector("[data-backdrop]");
   const searchInput = search.querySelector("input");
-  const searchButton = search.querySelector("[data-search-button]");
-  const iconSearch = searchButton.querySelector("[data-search-icon=\"search\"]");
-  const iconCross = searchButton.querySelector("[data-search-icon=\"cross\"]");
+  const searchButtonSearch = search.querySelector("[data-search-button='search']");
+  const searchButtonCross = search.querySelector("[data-search-button='cross']");
   const searchClose = document.querySelector("[data-search-close]");
   const userCartButton = document.querySelector("[data-cart]");
   const userLangSwitcherButton = document.querySelector("[data-lang-switcher]");
@@ -25,25 +24,25 @@ const initSearch = () => {
   searchInput.addEventListener("focus", () => {
     search.classList.add("active");
     backdrop.classList.add("active");
-    iconSearch.style.display = "none";
-    iconCross.style.display = "flex";
+    searchButtonSearch.style.display = "none";
+    searchButtonCross.style.display = "flex";
     searchClose.style.display = "flex";
     userCartButton.style.display = "none";
     userLangSwitcherButton.style.display = "none";
-    userBurgerButton.style.display = "none";
+    userBurgerButton.setAttribute('style', 'display:none !important');
     searchList.style.display = "flex";
     if (isMobile.matches) {
       logo.style.display = "none";
     }
   });
-  searchButton.addEventListener("click", () => {
+  searchButtonCross.addEventListener("click", () => {
     searchInput.value = "";
   });
   searchClose.addEventListener("click", () => {
     search.classList.remove("active");
     backdrop.classList.remove("active");
-    iconSearch.style.display = "flex";
-    iconCross.style.display = "none";
+    searchButtonSearch.style.display = "flex";
+    searchButtonCross.style.display = "none";
     searchClose.style.display = "none";
     userCartButton.style.display = "flex";
     userLangSwitcherButton.style.display = "flex";

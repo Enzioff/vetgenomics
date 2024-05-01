@@ -1,5 +1,8 @@
 // Класс оборачивает текст для заполнения из админ панели.
 .editor {
+  overflow: hidden;
+  min-height: 0;
+
   p {
     margin-bottom: 0;
     font-size: 18px;
@@ -48,10 +51,12 @@
     span {
       color: $c-navy;
     }
+
     strong {
       font-weight: 600;
       color: $c-navy;
     }
+
     blockquote {
       padding: 0;
       background-color: transparent;

@@ -29,7 +29,8 @@
   }
 
   &--accent {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $c-navy80;
       border-color: $c-navy20;
       color: $c-white;
@@ -37,6 +38,7 @@
     &:active {
       background-color: $c-navy;
       border-color: $c-navy20;
+      color: $c-white;
     }
   }
 
