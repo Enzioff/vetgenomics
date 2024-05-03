@@ -1,0 +1,46 @@
+.circle {
+  position: absolute;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+
+  &--main-green {
+    top: 22%;
+    right: -1200px;
+    @include r($xxl) {
+      top: 22%;
+      right: -1260px;
+    }
+    @include r($xl) {
+      top: 28%;
+      right: -1360px;
+    }
+    @include r($lg) {
+      top: 28%;
+      right: -1420px;
+    }
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  &--main-blue {
+    bottom: 14%;
+    left: -1600px;
+    @include r($xxl) {
+      bottom: 12%;
+      left: -1700px;
+    }
+    @include r($xl) {
+      bottom: 0;
+      left: -2100px;
+    }
+    @include r($lg) {
+      bottom: -4%;
+      left: -2140px;
+    }
+    @include r($md) {
+      display: none;
+    }
+  }
+}

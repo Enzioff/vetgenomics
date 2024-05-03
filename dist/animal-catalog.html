@@ -12,8 +12,8 @@
 <link href="./css/main.css" rel="stylesheet"></head>
 
 <body class="body bg-body">
-<header class="header">
-  <div class="container position-relative z-1">
+<header class="header d-flex h-100 flex-column">
+  <div class="container d-flex h-100 flex-column position-relative z-1">
     <div class="row d-flex justify-content-between align-items-center pe-auto" style="margin-bottom: 32px;">
       <div class="col-lg-2 col-md-3 col-sm-6">
         <a class="logo" href="#" data-logo>
@@ -58,8 +58,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xl-2 col-md-12">
+    <div class="row d-flex h-100">
+      <div class="col-xl-2 col-md-12 d-flex flex-column">
         <nav class="main-nav flex-column align-items-xl-start align-items-md-end" data-nav>
           <a class="main-nav__link transparent" href="#">Генетические тесты</a>
           <a class="main-nav__link transparent" href="#">Каталог тестов</a>
@@ -74,6 +74,25 @@
           <a class="main-nav__link transparent" href="#">Другие</a>
           <a class="main-nav__link transparent" href="#">Контакты</a>
         </nav>
+        <div class="page-navigation" data-page-navigation>
+          <ul class="page-navigation__list">
+            <li class="page-navigation__item active">
+              <a class="page-navigation__link" href="#first">Пункт саб навигации №1</a>
+            </li>
+            <li class="page-navigation__item">
+              <a class="page-navigation__link" href="#second">Пункт №2</a>
+            </li>
+            <li class="page-navigation__item">
+              <a class="page-navigation__link" href="#third">Пункт №3</a>
+            </li>
+            <li class="page-navigation__item">
+              <a class="page-navigation__link" href="#fourth">Пункт №4</a>
+            </li>
+          </ul>
+          <div class="page-navigation__scroll">
+            <div class="page-navigation__slider" data-slider></div>
+          </div>
+        </div>
       </div>
       <div class="col-xl-1"></div>
       <div class="col-xl-6 d-flex justify-content-center">

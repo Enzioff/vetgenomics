@@ -1,5 +1,7 @@
 .section {
+  position: relative;
   margin-bottom: 160px;
+  z-index: 1;
 
   @include r($xl) {
     margin-bottom: 120px;
