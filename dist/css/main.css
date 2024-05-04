@@ -2658,8 +2658,6 @@ svg {
 .circle {
   position: absolute;
   z-index: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
   pointer-events: none;
 }
 .circle--main-green {

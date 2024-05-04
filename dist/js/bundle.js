@@ -3450,6 +3450,8 @@ const initDefaultSlider = (el) => {
     slidesPerView: 1,
     spaceBetween: 24,
     watchSlidesProgress: true,
+    slidesPerGroup: 1,
+    slidesPerGroupSkip: 1,
     navigation: {
       nextEl: el.querySelector(".slider-btn--next"),
       prevEl: el.querySelector(".slider-btn--prev")
@@ -3471,6 +3473,8 @@ const initAutoSlider = (el) => {
     slidesPerView: "auto",
     spaceBetween: 0,
     watchSlidesProgress: true,
+    slidesPerGroup: 1,
+    slidesPerGroupSkip: 1,
     navigation: {
       nextEl: el.querySelector(".slider-btn--next"),
       prevEl: el.querySelector(".slider-btn--prev")
@@ -3515,16 +3519,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setActiveMenuItem()
   window.addEventListener('scroll', setActiveMenuItem);
+  animateBackground()
 });
 
 const initSubmenu = (submenu) => {
   const links = submenu.querySelectorAll("a");
-  const slider = submenu.querySelector("[data-slider]");
-  const circles = document.querySelectorAll(".circle");
-
-  let angle = 0;
-  let angleDegrees = 20;
-  let previousElementIndex = 0;
 
   if (!links) return;
 
@@ -3532,21 +3531,6 @@ const initSubmenu = (submenu) => {
     link.addEventListener("click", () => {
       arr.forEach(temp => temp.parentElement.classList.remove("active"));
       link.parentElement.classList.add("active");
-
-      previousElementIndex > idx ? angleDegrees = -Math.abs(angleDegrees) : angleDegrees = Math.abs(angleDegrees);
-
-      if (previousElementIndex !== idx) {
-        angle += angleDegrees;
-        circles.forEach((circle, idx) => {
-          if (idx % 2 === 0) {
-            circle.style.transform = `rotate(${-angle}deg)`;
-          } else {
-            circle.style.transform = `rotate(${angle}deg)`;
-          }
-        });
-      }
-
-      previousElementIndex = idx;
     });
   });
 };
@@ -3578,6 +3562,27 @@ function setActiveMenuItem() {
       slider.style.height = 0;
       slider.style.top = 0;
     }
+  });
+}
+
+const animateBackground = () => {
+  let lastScrollTop = 0;
+  const animationSpeed = 30;
+  const circles = document.querySelectorAll(".circle");
+
+  if (!circles) return;
+
+  window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    circles.forEach((circle, idx) => {
+      if (idx % 2 === 0) {
+        circle.style.transform = `rotate(${-(currentScroll / animationSpeed)}deg)`;
+      } else {
+        circle.style.transform = `rotate(${(currentScroll / animationSpeed)}deg)`;
+      }
+    });
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 }
 
