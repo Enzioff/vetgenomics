@@ -7,8 +7,7 @@
   &--default {
     overflow: visible !important;
 
-    .swiper-slide,
-    .swiper-slide-prev {
+    .swiper-slide {
       opacity: 0;
       visibility: hidden;
       transition: .2s linear;
@@ -18,6 +17,12 @@
     .swiper-slide-visible ~ .swiper-slide {
       opacity: 1;
       visibility: visible;
+    }
+
+    .swiper-slide-prev.swiper-slide-visible {
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s linear;
     }
 
     &--xxl {

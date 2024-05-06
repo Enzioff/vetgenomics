@@ -2799,8 +2799,7 @@ svg {
 .swiper--default {
   overflow: visible !important;
 }
-.swiper--default .swiper-slide,
-.swiper--default .swiper-slide-prev {
+.swiper--default .swiper-slide {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.2s linear;
@@ -2810,6 +2809,12 @@ svg {
 .swiper--default .swiper-slide-visible ~ .swiper-slide {
   opacity: 1;
   visibility: visible;
+}
+.swiper--default .swiper-slide-prev.swiper-slide-visible {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 @media only screen and (max-width: 1439px) {
   .swiper--default--xxl {
