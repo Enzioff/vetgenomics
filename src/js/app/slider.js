@@ -29,8 +29,6 @@ const initDefaultSlider = (el) => {
     slidesPerView: 1,
     spaceBetween: 24,
     watchSlidesProgress: true,
-    slidesPerGroup: 1,
-    slidesPerGroupSkip: 1,
     navigation: {
       nextEl: el.querySelector(".slider-btn--next"),
       prevEl: el.querySelector(".slider-btn--prev")
@@ -52,8 +50,6 @@ const initAutoSlider = (el) => {
     slidesPerView: "auto",
     spaceBetween: 0,
     watchSlidesProgress: true,
-    slidesPerGroup: 1,
-    slidesPerGroupSkip: 1,
     navigation: {
       nextEl: el.querySelector(".slider-btn--next"),
       prevEl: el.querySelector(".slider-btn--prev")
