@@ -1,0 +1,9 @@
+.background {
+  margin-bottom: 32px;
+  @include r($md) {
+    margin-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background: linear-gradient(180.49deg, #DEEDFB 53.19%, rgba(222, 237, 251, 0) 99.58%), linear-gradient(180.49deg, color(display-p3 0.882 0.929 0.980) 53.19%, color(display-p3 0.882 0.929 0.980 / 0) 99.58%);
+  }
+}

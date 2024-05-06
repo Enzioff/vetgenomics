@@ -7,6 +7,10 @@
   pointer-events: none;
   z-index: 4;
 
+  @include r($md) {
+    background: linear-gradient(180.49deg, #DEEDFB 11%, rgba(222, 237, 251, 0) 16%);
+  }
+
   &__backdrop {
     position: absolute;
     top: 0;
