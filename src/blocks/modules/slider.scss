@@ -79,15 +79,20 @@
     align-items: center;
     justify-content: center;
     border-radius: 48px;
-    border: 1px solid $c-dark80;
+    border: 1.4px solid $c-dark80;
     min-width: 44px;
     height: 44px;
 
     &:hover {
       border-color: $c-dark;
+
+      svg {
+        fill: $c-dark;
+      }
     }
 
     svg {
+      fill: $c-dark80;
       width: 21px;
       height: 21px;
     }

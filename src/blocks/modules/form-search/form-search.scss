@@ -4,14 +4,28 @@
   max-width: 424px;
   transition: .2s linear;
 
+  @include r($xxl) {
+    max-width: 384px;
+  }
+
+  @include r($lg) {
+    max-width: 322px;
+  }
+
   @include r($md) {
     max-width: 540px;
   }
 
   &.active {
     max-width: 486px;
+    @include r($xxl) {
+      max-width: 432px;
+    }
     @include r($xl) {
       max-width: 400px;
+    }
+    @include r($lg) {
+      max-width: 384px;
     }
     @include r($md) {
       max-width: 540px;
@@ -19,8 +33,15 @@
   }
 
   &--cube {
+    max-width: 256px;
     .form-search__search-block {
       border-radius: 8px;
+    }
+    .form-search__button {
+      right: 8px;
+    }
+    input {
+      padding: 12px;
     }
   }
 
@@ -39,6 +60,12 @@
     width: 24px;
     height: 24px;
     transform: translateY(-50%);
+
+    &:hover {
+      svg {
+        fill: $c-dark;
+      }
+    }
   }
 
   &__input {
@@ -51,7 +78,7 @@
     letter-spacing: -0.014em;
     border: none;
     background-color: transparent;
-    color: $c-dark60;
+    color: $c-dark80;
 
     &::placeholder {
       font: inherit;
@@ -60,7 +87,7 @@
   }
 
   &__icon {
-    fill: $c-dark;
+    fill: $c-dark60;
   }
 
   &--light {

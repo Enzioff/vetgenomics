@@ -5,7 +5,7 @@
   pointer-events: auto;
 
   @include r($xl) {
-    display: none;
+    display: none !important;
   }
 
   &__list {
@@ -47,6 +47,10 @@
       .page-navigation__link {
         font-weight: 500;
         color: $c-dark80;
+
+        &:hover {
+          color: $c-dark90;
+        }
       }
     }
   }
@@ -61,6 +65,10 @@
 
     @include r($xxl) {
       font-size: 13px;
+    }
+
+    &:hover {
+      color: $c-dark90;
     }
   }
 }

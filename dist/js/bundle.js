@@ -3138,6 +3138,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/sprite/icon-pagination-arrow-double.svg":
+/*!************************************************************!*\
+  !*** ./src/assets/sprite/icon-pagination-arrow-double.svg ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "icon-pagination-arrow-double-usage",
+      viewBox: "0 0 16 16",
+      url: "/assets/sprite/" + "sprite.svg#icon-pagination-arrow-double-usage",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/assets/sprite/icon-pagination-arrow.svg":
+/*!*****************************************************!*\
+  !*** ./src/assets/sprite/icon-pagination-arrow.svg ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "icon-pagination-arrow-usage",
+      viewBox: "0 0 16 16",
+      url: "/assets/sprite/" + "sprite.svg#icon-pagination-arrow-usage",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./src/assets/sprite/icon-play.svg":
 /*!*****************************************!*\
   !*** ./src/assets/sprite/icon-play.svg ***!
@@ -3281,15 +3319,20 @@ const initMobileMenu = () => {
       (0,_helpers_toggleClasses__WEBPACK_IMPORTED_MODULE_0__.toggleClasses)([burger, backdrop, navigation]);
       burger.classList.contains("active")
         ? scrollElement.classList.add("showScrollElement")
-        : scrollElement.classList.remove("showScrollElement");
+        : null;
     });
 
     isMobile.addEventListener("change", (evt) => {
-      console.log(evt.matches)
       if (evt.matches) {
         (0,_helpers_removeClasses__WEBPACK_IMPORTED_MODULE_1__.removeClasses)([burger, backdrop, navigation, scrollElement])
       }
     });
+
+    const close = () => {
+      (0,_helpers_removeClasses__WEBPACK_IMPORTED_MODULE_1__.removeClasses)([burger, backdrop, navigation, scrollElement])
+    }
+
+    backdrop.addEventListener('click', close)
   }
 };
 
@@ -3323,10 +3366,16 @@ const initSearch = () => {
   const searchList = document.querySelector("[data-search-list]");
   const findedSearchItems = searchList.querySelectorAll(".article-search");
   const logo = document.querySelector("[data-logo]");
+  const body = document.querySelector('body');
+  const subNavigation = document.querySelector('[data-page-navigation]');
+  const navigation = document.querySelector('[data-nav]')
+  const burger = document.querySelector('[data-burger]')
 
-  searchInput.addEventListener("focus", () => {
+  search.addEventListener("click", () => {
     search.classList.add("active");
     backdrop.classList.add("active");
+    navigation.classList.remove("active");
+    burger.classList.remove("active");
     searchButtonSearch.style.display = "none";
     searchButtonCross.style.display = "flex";
     searchClose.style.display = "flex";
@@ -3334,6 +3383,8 @@ const initSearch = () => {
     userLangSwitcherButton.style.display = "none";
     userBurgerButton.setAttribute('style', 'display:none !important');
     searchList.style.display = "flex";
+    body.style.overflow = 'hidden';
+    subNavigation.style.display = 'none';
     if (isMobile.matches) {
       logo.style.display = "none";
     }
@@ -3341,7 +3392,8 @@ const initSearch = () => {
   searchButtonCross.addEventListener("click", () => {
     searchInput.value = "";
   });
-  searchClose.addEventListener("click", () => {
+
+  const show = () => {
     search.classList.remove("active");
     backdrop.classList.remove("active");
     searchButtonSearch.style.display = "flex";
@@ -3351,10 +3403,23 @@ const initSearch = () => {
     userLangSwitcherButton.style.display = "flex";
     userBurgerButton.style.display = "flex";
     searchList.style.display = "none";
+    body.style.overflow = 'visible';
+    subNavigation.style.display = 'flex';
+    searchInput.value = ''
     if (isMobile.matches) {
       logo.style.display = "block";
     }
-  });
+  }
+
+  searchClose.addEventListener("click", show);
+  backdrop.addEventListener("click", show);
+
+  window.addEventListener('keydown', (evt) => {
+    const esc = evt.keyCode;
+    if (esc === 27 && search.classList.contains('active')) {
+      show()
+    }
+  })
 
   searchList.addEventListener("scroll", () => {
     document.activeElement && document.activeElement.blur();
@@ -3707,6 +3772,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_sprite_icon_play_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/sprite/icon-play.svg */ "./src/assets/sprite/icon-play.svg");
 /* harmony import */ var _assets_sprite_icon_plus_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/sprite/icon-plus.svg */ "./src/assets/sprite/icon-plus.svg");
 /* harmony import */ var _assets_sprite_icon_cross_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/sprite/icon-cross.svg */ "./src/assets/sprite/icon-cross.svg");
+/* harmony import */ var _assets_sprite_icon_pagination_arrow_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/sprite/icon-pagination-arrow.svg */ "./src/assets/sprite/icon-pagination-arrow.svg");
+/* harmony import */ var _assets_sprite_icon_pagination_arrow_double_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/sprite/icon-pagination-arrow-double.svg */ "./src/assets/sprite/icon-pagination-arrow-double.svg");
+
+
 
 
 
@@ -3730,7 +3799,9 @@ __webpack_require__.r(__webpack_exports__);
     tg: _assets_sprite_icon_tg_svg__WEBPACK_IMPORTED_MODULE_7__["default"],
     play: _assets_sprite_icon_play_svg__WEBPACK_IMPORTED_MODULE_8__["default"],
     plus: _assets_sprite_icon_plus_svg__WEBPACK_IMPORTED_MODULE_9__["default"],
-    cross: _assets_sprite_icon_cross_svg__WEBPACK_IMPORTED_MODULE_10__["default"]
+    cross: _assets_sprite_icon_cross_svg__WEBPACK_IMPORTED_MODULE_10__["default"],
+    paginationArrow: _assets_sprite_icon_pagination_arrow_svg__WEBPACK_IMPORTED_MODULE_11__["default"],
+    paginationArrowDouble: _assets_sprite_icon_pagination_arrow_double_svg__WEBPACK_IMPORTED_MODULE_12__["default"]
 });
 
 

@@ -11,6 +11,9 @@
   scrollbar-width: none;
   overflow-y: auto;
 
+  @include r($xxl) {
+    max-width: 432px;
+  }
   @include r($xl) {
     max-width: 400px;
   }

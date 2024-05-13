@@ -1,5 +1,7 @@
 .mobile-fixed-bottom {
-  transition: .2s linear;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+
   @include r($md) {
     position: fixed;
     left: 0;

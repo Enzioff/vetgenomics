@@ -7,8 +7,22 @@
   pointer-events: none;
   z-index: 4;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180.49deg, #E1EDFA 53%, rgba(225, 237, 250, 0) 100%);
+    backdrop-filter: blur(24px);
+  }
+
   @include r($md) {
-    background: linear-gradient(180.49deg, #DEEDFB 11%, rgba(222, 237, 251, 0) 16%);
+    &::after {
+      display: flex;
+    }
   }
 
   &__backdrop {

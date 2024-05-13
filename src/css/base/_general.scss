@@ -52,4 +52,43 @@ svg {
 
 .showScrollElement {
     bottom: 16px !important;
+    transition: .4s ease-in-out;
+}
+
+.mobile-limitation {
+    &-1 {
+        @include r($md) {
+            & > *:nth-child(1n + 2) {
+                display: none;
+            }
+        }
+    }
+    &-2 {
+        @include r($md) {
+            & > *:nth-child(1n + 3) {
+                display: none;
+            }
+        }
+    }
+    &-3 {
+        @include r($md) {
+            & > *:nth-child(1n + 4) {
+                display: none;
+            }
+        }
+    }
+    &-4 {
+        @include r($md) {
+            & > *:nth-child(1n + 5) {
+                display: none;
+            }
+        }
+    }
+    &-5 {
+        @include r($md) {
+            & > *:nth-child(1n + 6) {
+                display: none;
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 .main-nav {
   display: flex;
   gap: 10px;
-  pointer-events: auto;
+  pointer-events: none;
 
   @include r($xl) {
     display: none;
@@ -24,11 +24,13 @@
     letter-spacing: -0.014em;
     color: $c-dark80;
     text-decoration: none;
+    pointer-events: auto;
 
     &:hover,
     &:active {
-      background-color: $c-lightBlue;
-      border-color: $c-dark40
+      background-color: $c-lightBlue80;
+      border-color: $c-dark40;
+      color: $c-dark;
     }
 
     @include r($xxl) {

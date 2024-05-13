@@ -25,5 +25,18 @@
     &--closed {
       border-color: transparent;
     }
+
+    svg {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      fill: $c-dark80;
+    }
+
+    &--arrow {
+      &--reverse {
+        transform: rotate(180deg);
+      }
+    }
   }
 }

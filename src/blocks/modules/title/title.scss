@@ -6,11 +6,11 @@
   letter-spacing: -0.014em;
   color: $c-dark;
 
-  @include r($xl) {
+  @include r($xxl) {
     margin-bottom: 48px;
     font-size: 40px;
   }
-  @include r($lg) {
+  @include r($xl) {
     margin-bottom: 32px;
     font-size: 32px;
   }

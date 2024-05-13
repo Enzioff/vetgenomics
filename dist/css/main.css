@@ -2166,6 +2166,34 @@ svg {
 
 .showScrollElement {
   bottom: 16px !important;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-limitation-1 > *:nth-child(1n+2) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-limitation-2 > *:nth-child(1n+3) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-limitation-3 > *:nth-child(1n+4) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-limitation-4 > *:nth-child(1n+5) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobile-limitation-5 > *:nth-child(1n+6) {
+    display: none;
+  }
 }
 
 .main {
@@ -2200,7 +2228,7 @@ svg {
   font-weight: 400;
   line-height: 22.32px;
   letter-spacing: -0.014em;
-  color: #414663;
+  color: rgba(65, 70, 99, 0.8980392157);
 }
 @media only screen and (max-width: 1279px) {
   .editor p {
@@ -2258,12 +2286,13 @@ svg {
 
 .section {
   position: relative;
-  margin-bottom: 160px;
+  margin-bottom: 120px;
   z-index: 1;
+  scroll-margin: 100px;
 }
 @media only screen and (max-width: 1279px) {
   .section {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -2275,16 +2304,24 @@ svg {
   position: relative;
   width: 100vw;
   height: 100vh;
+  margin-bottom: 100px;
   max-height: 980px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 1279px) {
+  .section--full {
+    margin-bottom: 60px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .section--full {
-    margin-top: 144px;
+    margin-top: 120px;
     width: auto;
+    height: calc(100vh - 160px);
     max-height: 554px;
+    min-height: 310px;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -2401,6 +2438,7 @@ svg {
   gap: 4px;
 }
 .button--icon svg {
+  fill: rgba(65, 70, 99, 0.8);
   width: 20px;
   height: 20px;
 }
@@ -2411,6 +2449,10 @@ svg {
 }
 .button--dark:hover {
   border-color: #414663;
+  color: #414663;
+}
+.button--dark:hover svg {
+  fill: #414663;
 }
 .button--transparent {
   -webkit-box-pack: start;
@@ -2564,10 +2606,23 @@ svg {
 .pagination__button--closed {
   border-color: transparent;
 }
+.pagination__button svg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  fill: rgba(65, 70, 99, 0.8);
+}
+.pagination__button--arrow--reverse {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 
 .mobile-fixed-bottom {
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 @media only screen and (max-width: 767px) {
   .mobile-fixed-bottom {
@@ -2598,6 +2653,8 @@ svg {
   letter-spacing: -0.014em;
   text-decoration: none;
   color: rgba(65, 70, 99, 0.8);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 @media only screen and (max-width: 1279px) {
   .read-more {
@@ -2608,7 +2665,11 @@ svg {
 .read-more:hover, .read-more:active {
   color: #414663;
 }
+.read-more:hover svg, .read-more:active svg {
+  fill: #414663;
+}
 .read-more svg {
+  fill: rgba(65, 70, 99, 0.8);
   width: 20px;
   height: 20px;
 }
@@ -2723,7 +2784,7 @@ svg {
 }
 @media only screen and (max-width: 1279px) {
   .page-navigation {
-    display: none;
+    display: none !important;
   }
 }
 .page-navigation__list {
@@ -2769,6 +2830,9 @@ svg {
   font-weight: 500;
   color: rgba(65, 70, 99, 0.8);
 }
+.page-navigation__item.active .page-navigation__link:hover {
+  color: rgba(65, 70, 99, 0.8980392157);
+}
 .page-navigation__link {
   font-size: 14px;
   font-weight: 400;
@@ -2781,6 +2845,9 @@ svg {
   .page-navigation__link {
     font-size: 13px;
   }
+}
+.page-navigation__link:hover {
+  color: rgba(65, 70, 99, 0.8980392157);
 }
 
 .background {
@@ -2896,14 +2963,18 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 48px;
-  border: 1px solid rgba(65, 70, 99, 0.8);
+  border: 1.4px solid rgba(65, 70, 99, 0.8);
   min-width: 44px;
   height: 44px;
 }
 .slider-btn:hover {
   border-color: #414663;
 }
+.slider-btn:hover svg {
+  fill: #414663;
+}
 .slider-btn svg {
+  fill: rgba(65, 70, 99, 0.8);
   width: 21px;
   height: 21px;
 }
@@ -2936,9 +3007,24 @@ svg {
   pointer-events: none;
   z-index: 4;
 }
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180.49deg, #E1EDFA 53%, rgba(225, 237, 250, 0) 100%);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
 @media only screen and (max-width: 767px) {
-  .header {
-    background: linear-gradient(180.49deg, #DEEDFB 11%, rgba(222, 237, 251, 0) 16%);
+  .header::after {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .header__backdrop {
@@ -2975,7 +3061,7 @@ svg {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  pointer-events: auto;
+  pointer-events: none;
 }
 @media only screen and (max-width: 1279px) {
   .main-nav {
@@ -3002,10 +3088,12 @@ svg {
   letter-spacing: -0.014em;
   color: rgba(65, 70, 99, 0.8);
   text-decoration: none;
+  pointer-events: auto;
 }
 .main-nav__link:hover, .main-nav__link:active {
-  background-color: #F1F8FF;
+  background-color: rgba(241, 248, 255, 0.8);
   border-color: rgba(65, 70, 99, 0.4);
+  color: #414663;
 }
 @media only screen and (max-width: 1439px) {
   .main-nav__link {
@@ -3056,13 +3144,43 @@ svg {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 44px;
+  width: 44px;
   height: 44px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17.1px;
   cursor: pointer;
   color: rgba(65, 70, 99, 0.8980392157);
+  background-color: rgba(241, 248, 255, 0.6);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+@media only screen and (max-width: 1439px) {
+  .user-nav__button {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .user-nav__button {
+    width: 36px;
+    height: 36px;
+  }
+}
+.user-nav__button:hover {
+  background-color: rgba(241, 248, 255, 0.8);
+  color: #414663;
+}
+.user-nav__button:hover svg {
+  fill: #414663;
 }
 .user-nav__button--circle {
   border-radius: 60px;
+}
+.user-nav__button svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(65, 70, 99, 0.8);
 }
 
 .form-search {
@@ -3075,6 +3193,16 @@ svg {
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+@media only screen and (max-width: 1439px) {
+  .form-search {
+    max-width: 384px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .form-search {
+    max-width: 322px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .form-search {
     max-width: 540px;
@@ -3083,9 +3211,19 @@ svg {
 .form-search.active {
   max-width: 486px;
 }
+@media only screen and (max-width: 1439px) {
+  .form-search.active {
+    max-width: 432px;
+  }
+}
 @media only screen and (max-width: 1279px) {
   .form-search.active {
     max-width: 400px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .form-search.active {
+    max-width: 384px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -3093,8 +3231,17 @@ svg {
     max-width: 540px;
   }
 }
+.form-search--cube {
+  max-width: 256px;
+}
 .form-search--cube .form-search__search-block {
   border-radius: 8px;
+}
+.form-search--cube .form-search__button {
+  right: 8px;
+}
+.form-search--cube input {
+  padding: 12px;
 }
 .form-search__search-block {
   position: relative;
@@ -3118,6 +3265,9 @@ svg {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+.form-search__button:hover svg {
+  fill: #414663;
+}
 .form-search__input {
   display: block;
   width: 100%;
@@ -3128,7 +3278,7 @@ svg {
   letter-spacing: -0.014em;
   border: none;
   background-color: transparent;
-  color: rgba(65, 70, 99, 0.6);
+  color: rgba(65, 70, 99, 0.8);
 }
 .form-search__input::-webkit-input-placeholder {
   font: inherit;
@@ -3151,7 +3301,7 @@ svg {
   color: rgba(65, 70, 99, 0.6);
 }
 .form-search__icon {
-  fill: #414663;
+  fill: rgba(65, 70, 99, 0.6);
 }
 .form-search--light .form-search__input {
   color: rgba(255, 255, 255, 0.6);
@@ -3183,13 +3333,13 @@ svg {
   letter-spacing: -0.014em;
   color: #414663;
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1439px) {
   .title {
     margin-bottom: 48px;
     font-size: 40px;
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1279px) {
   .title {
     margin-bottom: 32px;
     font-size: 32px;
@@ -3363,7 +3513,7 @@ svg {
 }
 
 .footer {
-  margin-bottom: 230px;
+  margin-bottom: 60px;
 }
 @media only screen and (max-width: 1023px) {
   .footer {
@@ -3516,6 +3666,11 @@ svg {
   letter-spacing: -0.014em;
   color: #FFFFFF;
 }
+@media only screen and (max-width: 1280px) {
+  .main-title {
+    font-size: 110px;
+  }
+}
 @media only screen and (max-width: 1279px) {
   .main-title {
     font-size: 96px;
@@ -3551,6 +3706,11 @@ svg {
   max-height: 100vh;
   scrollbar-width: none;
   overflow-y: auto;
+}
+@media only screen and (max-width: 1439px) {
+  .search-list {
+    max-width: 432px;
+  }
 }
 @media only screen and (max-width: 1279px) {
   .search-list {
@@ -3673,6 +3833,15 @@ svg {
 
 .article-card-preview {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -3682,9 +3851,27 @@ svg {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100%;
-  min-height: auto;
-  max-height: 400px;
+  height: 400px;
+}
+@media only screen and (max-width: 1439px) {
+  .article-card-preview__picture {
+    height: 368px;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .article-card-preview__picture {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .article-card-preview__picture {
+    height: 424px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-card-preview__picture {
+    height: 348px;
+  }
 }
 .article-card-preview__picture img {
   display: block;
@@ -3692,6 +3879,26 @@ svg {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 1439px) {
+  .article-card-preview--slim .article-card-preview__picture {
+    height: 368px;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .article-card-preview--slim .article-card-preview__picture {
+    height: 284px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .article-card-preview--slim .article-card-preview__picture {
+    height: 288px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-card-preview--slim .article-card-preview__picture {
+    height: 218px;
+  }
 }
 .article-card-preview__link {
   position: absolute;
@@ -3785,8 +3992,25 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 12px;
+  height: 380px;
   border-radius: 16px;
   background-color: rgba(241, 248, 255, 0.8);
+  text-decoration: none;
+}
+@media only screen and (max-width: 1279px) {
+  .article-news {
+    height: 348px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .article-news {
+    height: 397px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-news {
+    height: 402px;
+  }
 }
 .article-news__picture {
   display: -webkit-box;
@@ -3795,6 +4019,7 @@ svg {
   display: flex;
   margin-bottom: 12px;
   border-radius: 8px;
+  max-height: 170px;
   overflow: hidden;
 }
 .article-news__picture img {
@@ -3889,7 +4114,7 @@ svg {
   width: 100px;
   height: 100px;
   border-radius: 8px;
-  border: 1px solid rgba(65, 70, 99, 0.4);
+  border: 1px solid rgba(65, 70, 99, 0.1019607843);
   overflow: hidden;
 }
 .article-search__picture img {
@@ -3911,6 +4136,7 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
 .article-search__title {
   margin-bottom: 4px;

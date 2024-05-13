@@ -20,10 +20,16 @@ const initSearch = () => {
   const searchList = document.querySelector("[data-search-list]");
   const findedSearchItems = searchList.querySelectorAll(".article-search");
   const logo = document.querySelector("[data-logo]");
+  const body = document.querySelector('body');
+  const subNavigation = document.querySelector('[data-page-navigation]');
+  const navigation = document.querySelector('[data-nav]')
+  const burger = document.querySelector('[data-burger]')
 
-  searchInput.addEventListener("focus", () => {
+  search.addEventListener("click", () => {
     search.classList.add("active");
     backdrop.classList.add("active");
+    navigation.classList.remove("active");
+    burger.classList.remove("active");
     searchButtonSearch.style.display = "none";
     searchButtonCross.style.display = "flex";
     searchClose.style.display = "flex";
@@ -31,6 +37,8 @@ const initSearch = () => {
     userLangSwitcherButton.style.display = "none";
     userBurgerButton.setAttribute('style', 'display:none !important');
     searchList.style.display = "flex";
+    body.style.overflow = 'hidden';
+    subNavigation.style.display = 'none';
     if (isMobile.matches) {
       logo.style.display = "none";
     }
@@ -38,7 +46,8 @@ const initSearch = () => {
   searchButtonCross.addEventListener("click", () => {
     searchInput.value = "";
   });
-  searchClose.addEventListener("click", () => {
+
+  const show = () => {
     search.classList.remove("active");
     backdrop.classList.remove("active");
     searchButtonSearch.style.display = "flex";
@@ -48,10 +57,23 @@ const initSearch = () => {
     userLangSwitcherButton.style.display = "flex";
     userBurgerButton.style.display = "flex";
     searchList.style.display = "none";
+    body.style.overflow = 'visible';
+    subNavigation.style.display = 'flex';
+    searchInput.value = ''
     if (isMobile.matches) {
       logo.style.display = "block";
     }
-  });
+  }
+
+  searchClose.addEventListener("click", show);
+  backdrop.addEventListener("click", show);
+
+  window.addEventListener('keydown', (evt) => {
+    const esc = evt.keyCode;
+    if (esc === 27 && search.classList.contains('active')) {
+      show()
+    }
+  })
 
   searchList.addEventListener("scroll", () => {
     document.activeElement && document.activeElement.blur();

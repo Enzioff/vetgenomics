@@ -2,13 +2,26 @@
   display: flex;
   flex-direction: column;
   padding: 12px;
+  height: 380px;
   border-radius: 16px;
   background-color: $c-lightBlue80;
+  text-decoration: none;
+
+  @include r($xl) {
+    height: 348px;
+  }
+  @include r($lg) {
+    height: 397px;
+  }
+  @include r($md) {
+    height: 402px;
+  }
 
   &__picture {
     display: flex;
     margin-bottom: 12px;
     border-radius: 8px;
+    max-height: 170px;
     overflow: hidden;
 
     img {

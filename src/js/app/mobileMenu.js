@@ -17,14 +17,19 @@ const initMobileMenu = () => {
       toggleClasses([burger, backdrop, navigation]);
       burger.classList.contains("active")
         ? scrollElement.classList.add("showScrollElement")
-        : scrollElement.classList.remove("showScrollElement");
+        : null;
     });
 
     isMobile.addEventListener("change", (evt) => {
-      console.log(evt.matches)
       if (evt.matches) {
         removeClasses([burger, backdrop, navigation, scrollElement])
       }
     });
+
+    const close = () => {
+      removeClasses([burger, backdrop, navigation, scrollElement])
+    }
+
+    backdrop.addEventListener('click', close)
   }
 };

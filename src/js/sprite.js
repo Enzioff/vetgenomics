@@ -9,6 +9,8 @@ import tg from "../assets/sprite/icon-tg.svg";
 import play from "../assets/sprite/icon-play.svg";
 import plus from "../assets/sprite/icon-plus.svg";
 import cross from "../assets/sprite/icon-cross.svg";
+import paginationArrow from "../assets/sprite/icon-pagination-arrow.svg";
+import paginationArrowDouble from "../assets/sprite/icon-pagination-arrow-double.svg";
 
 export default {
     search,
@@ -21,5 +23,7 @@ export default {
     tg,
     play,
     plus,
-    cross
+    cross,
+    paginationArrow,
+    paginationArrowDouble
 };

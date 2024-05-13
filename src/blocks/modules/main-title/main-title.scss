@@ -5,6 +5,10 @@
   letter-spacing: -0.014em;
   color: $c-white;
 
+  @include r($xl + 1) {
+    font-size: 110px;
+  }
+
   @include r($xl) {
     font-size: 96px;
   }
