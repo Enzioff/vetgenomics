@@ -35,8 +35,8 @@ function setActiveMenuItem() {
 
     if (!section) return;
     if (
-      section.offsetTop <= fromTop + 160 &&
-      section.offsetTop + section.offsetHeight > fromTop + 160
+      section.offsetTop <= fromTop + 190 &&
+      section.offsetTop + section.offsetHeight > fromTop
     ) {
       item.parentElement.classList.add('active');
       slider.style.height = item.offsetHeight + "px";
