@@ -2804,6 +2804,10 @@ button.swiper-pagination-bullet {
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+.swiper--default .swiper-slide:nth-last-child(2) {
+  opacity: 1;
+  visibility: visible;
+}
 @media only screen and (max-width: 1439px) {
   .swiper--default--xxl {
     overflow: visible !important;
@@ -3142,6 +3146,11 @@ button.swiper-pagination-bullet {
 }
 .form-search--cube {
   max-width: 256px;
+}
+@media only screen and (max-width: 767px) {
+  .form-search--cube {
+    max-width: 100%;
+  }
 }
 .form-search--cube .form-search__search-block {
   border-radius: 8px;

@@ -24,6 +24,10 @@
       visibility: hidden;
       transition: .2s linear;
     }
+    .swiper-slide:nth-last-child(2) {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &--xxl {
       @include r($xxl) {
